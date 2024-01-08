@@ -10,7 +10,20 @@ const vapIdKeys = {
 };
 
 // 2. Setting Vapid details
-push.setVapidDetails("mailto:luciendelmar", vapIdKeys.publicKey, vapIdKeys.privateKey)
+push.setVapidDetails(
+  "mailto:luciendelmar",
+  vapIdKeys.publicKey,
+  vapIdKeys.privateKey
+);
 
-let subscribers;
+let subscribers = {
+  endpoint:
+    "https://fcm.googleapis.com/fcm/send/cJ4NRkRabVM:APA91bHsGC-BnY6G3ppxZWzpXhr2-KWN51WQfKNuej5EmlJN8DNxApLXvF-YOJXfVJhRl6f_nIX_B94p59aoLn09g7prMv-vXanXOCMgXvn2bjCNgAOSY216uR1Xb8RFhZMFPvqqyqcU",
+  expirationTime: null,
+  keys: {
+    p256dh:
+      "BNwBGGYVnY_z-I1303HxV7ngCgfm2bqGCfvztrKcKN9M-ZYBta6rcfDq7Zo4H2I9Q-R2PtMgBek0oRlQh-5QAwg",
+    auth: "rW1W9RD0E-V5SWZLnGik4g",
+  },
+};
 push.sendNotification(subscribers, "testMessage");
