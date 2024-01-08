@@ -1,3 +1,3 @@
 self.addEventListener("push", (event) => {
-  event.waitUntil(self.registration.sendNotification("test message"));
+  self.registration.sendNotification("test message");
 });
