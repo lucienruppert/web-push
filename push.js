@@ -16,7 +16,7 @@ push.setVapidDetails(
   vapIdKeys.privateKey
 );
 
-let subscribers = {
+const subscribers = {
   endpoint:
     "https://fcm.googleapis.com/fcm/send/cJ4NRkRabVM:APA91bHsGC-BnY6G3ppxZWzpXhr2-KWN51WQfKNuej5EmlJN8DNxApLXvF-YOJXfVJhRl6f_nIX_B94p59aoLn09g7prMv-vXanXOCMgXvn2bjCNgAOSY216uR1Xb8RFhZMFPvqqyqcU",
   expirationTime: null,
@@ -26,4 +26,15 @@ let subscribers = {
     auth: "rW1W9RD0E-V5SWZLnGik4g",
   },
 };
+
+// const subscribers = {
+//   endpoint:
+//     "https://web.push.apple.com/QIFXREn2y5P1RFIaOkqJtcm5TBX5Gnr5kPEaIBKna15e5OH2Ls63LkLvTuboo9fgauM8q5yQDFZrW4sat0PkK2o6P_nDGfZNI4xfmXR_ZPoKkEuRnxmZkXDwQCs7V4WvVB219OUoyWL6SCVPuIYfKUD46iqqyAb3EYTxwXsv92U",
+//   keys: {
+//     p256dh:
+//       "BOlfEQ_5W5LGQVcU3-WPLoCIAgh6chwZosD4DnhSaNR7GK3tBQtWJtnlQ3T0MoNiHco59etHBn8FALKjFonofBs",
+//     auth: "7020TPQmkZyZWOeTf-L11A",
+//   },
+// };
+
 push.sendNotification(subscribers, "testMessage");
