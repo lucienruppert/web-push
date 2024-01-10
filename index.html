@@ -8,21 +8,21 @@
   </head>
   <body>
     <button onclick="subscribe()">SUBSCRIBE TO NOTIFICATIONS</button>
+    <p></p>
     <script>
-      // 1. Registering the service worker
       addEventListener("load", async () => {
         let serviceWorker = await navigator.serviceWorker.register("./sw.js");
-        console.log(serviceWorker);
       });
 
-      // 2. Subscribing to the Push Service through the Service Worker
       async function subscribe() {
         let serviceWorker = await navigator.serviceWorker.ready;
         let pushAuth = await serviceWorker.pushManager.subscribe({
           userVisibleOnly: true,
-          applicationServerKey: "BOq3NBCEquV0lrUlxKqNb-FQLP5adry8zGlZ0Vw7INXP77MSdD-Jc2TtzPkaK6BeKO3zITPq5oKQ6qpicG-o3Xk",
+          applicationServerKey:
+            "BOq3NBCEquV0lrUlxKqNb-FQLP5adry8zGlZ0Vw7INXP77MSdD-Jc2TtzPkaK6BeKO3zITPq5oKQ6qpicG-o3Xk",
         });
         console.log(JSON.stringify(pushAuth));
+        document.querySelector("p").innerHTML = JSON.stringify(pushAuth);
       }
     </script>
   </body>
