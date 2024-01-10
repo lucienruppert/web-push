@@ -5,9 +5,10 @@ const push = require("web-push");
 
 // 1. Generating The Vapid Keys
 const vapIdKeys = {
-  publicKey: 'BCp-kQUClPamzffhN9BFw9D1KeXy29yarMVOIbMTIp4ll8PAVyUEduzRqZuV1eCbNid5wXC6Sjw10RMy1qsHgfI',
-  privateKey: 'PRVyw-1P2LvHUk8_oEcQGMPqyPXzfYqUlWWouzCzzr0'
-}
+  publicKey:
+    "BCp-kQUClPamzffhN9BFw9D1KeXy29yarMVOIbMTIp4ll8PAVyUEduzRqZuV1eCbNid5wXC6Sjw10RMy1qsHgfI",
+  privateKey: "PRVyw-1P2LvHUk8_oEcQGMPqyPXzfYqUlWWouzCzzr0",
+};
 
 // 2. Setting Vapid details
 push.setVapidDetails(
@@ -19,21 +20,21 @@ push.setVapidDetails(
 const subscribers = [
   {
     endpoint:
-      "https://fcm.googleapis.com/fcm/send/cJ4NRkRabVM:APA91bHsGC-BnY6G3ppxZWzpXhr2-KWN51WQfKNuej5EmlJN8DNxApLXvF-YOJXfVJhRl6f_nIX_B94p59aoLn09g7prMv-vXanXOCMgXvn2bjCNgAOSY216uR1Xb8RFhZMFPvqqyqcU",
+      "https://fcm.googleapis.com/fcm/send/cijoeUAbJRY:APA91bEEHedYgkmmUwfixWB54YyGeayI9BYEG4evne2V5FnLbu6YlS3UpBnrRdoRZ3LONYZbau0bO95HMDvclnaxi8hfeMewF44WKp5ETEK5ecyl5_drXjcc14BHN7WWYBOKKEjRDBI8",
     expirationTime: null,
     keys: {
       p256dh:
-        "BNwBGGYVnY_z-I1303HxV7ngCgfm2bqGCfvztrKcKN9M-ZYBta6rcfDq7Zo4H2I9Q-R2PtMgBek0oRlQh-5QAwg",
-      auth: "rW1W9RD0E-V5SWZLnGik4g",
+        "BLMQ2VA8MJmsu2ckbfG6tLHt7nQzV1-McEKz_Ougq4BJZKhBq8KFGZpjeguLN0diHroTeCJZr8Nn5eeGZ5kqcbA",
+      auth: "bccTYmtdGUDtVSNElQzkRg",
     },
   },
   {
     endpoint:
-      "https://web.push.apple.com/QIFXREn2y5P1RFIaOkqJtcm5TBX5Gnr5kPEaIBKna15e5OH2Ls63LkLvTuboo9fgauM8q5yQDFZrW4sat0PkK2o6P_nDGfZNI4xfmXR_ZPoKkEuRnxmZkXDwQCs7V4WvVB219OUoyWL6SCVPuIYfKUD46iqqyAb3EYTxwXsv92U",
+      "https://web.push.apple.com/QPVD4mrOeX7Ywt-FFBpWSo5JuKaXDrzwXGJWm0UJiIZLIbZ1hf16bBud7oRniEu13rIP5rLngk6-CFNNvwW7oFLIpPVC85rV1JIEc-wyReua6kSlVXeCUDVi7acA200ad2T4nO_CfhQ4COKYb9GuZl8zan5S2hRNCv98hLznoJA",
     keys: {
       p256dh:
-        "BOlfEQ_5W5LGQVcU3-WPLoCIAgh6chwZosD4DnhSaNR7GK3tBQtWJtnlQ3T0MoNiHco59etHBn8FALKjFonofBs",
-      auth: "7020TPQmkZyZWOeTf-L11A",
+        "BIZIzE4EjAST5WNgG7L881vbr16Gmr20CVhyPxGL2SBcZSts7dTotJ1d2kOu_mWAeTws5YgWtqidX3onJxMvbMg",
+      auth: "A56gElHUT-wu0ILV3jQihQ",
     },
   },
 ];
